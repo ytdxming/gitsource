@@ -1,0 +1,22 @@
+--安装完成后配置
+------git config --global user.name "Your Name"
+------git config --global user.email "email@example.com"
+------git init
+
+
+--添加文件到git仓库，分为两步
+------git add filename.**
+------git commit -m "describe the file"
+
+
+
+--查看历史信息,显示从最近到最远的提交日志
+------git log
+------git log --pretty=oneline//简要信息的输出
+
+
+--git 中,用 HEAD表示当前版本，HEAD^表示前一个版本，HEAD^^表示前前一个版本，HEAD~100表示前数100个版本
+------git  reset --hard HEAD^  //返回前一个版本
+
+
+
