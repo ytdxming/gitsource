@@ -1,0 +1,11 @@
+--学习使用git
+--https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
+----第一次安装git
+-----git:https://www.github.com/ytdxming
+-----git 中github clone "Permission denied (publickey). fatal: Could not read from remote repository."
+-------解决方法：https://blog.csdn.net/chaoyueziji123/article/details/54669555
+-----解决ssh-keygen 不是内部或外部命令
+-------解决方法：https://blog.csdn.net/zy_281870667/article/details/50443403
+-----error: src refspec master does not match any.error: failed to push some refs to 'git@github.com:ytdxming/gitsource.git'
+-------解决方法：仓库为空，添加文件https://www.cnblogs.com/jeremylee/p/5715289.html
