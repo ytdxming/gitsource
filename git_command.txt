@@ -26,4 +26,13 @@
 --git creat a new line for test for git branch dev/********
 
 
+--git checkout -b dev
+------git 中创建分支使用git branch branchname
+------git中切换分支使用git checkout branchname
+------本命令为创建并切换到分支dev
+
+
+
+
+
 
