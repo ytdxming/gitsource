@@ -17,6 +17,13 @@
 
 --git 中,用 HEAD表示当前版本，HEAD^表示前一个版本，HEAD^^表示前前一个版本，HEAD~100表示前数100个版本
 ------git  reset --hard HEAD^  //返回前一个版本
+------git reset --hard db2e8   //返回id指出的版本
+
+--git中，记录每一次使用命令的命令
+------git reflog
+
+
+--git creat a new line for test for git branch dev/********
 
 
 

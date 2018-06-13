@@ -3,9 +3,26 @@
 
 ----第一次安装git
 -----git:https://www.github.com/ytdxming
+
+
 -----git 中github clone "Permission denied (publickey). fatal: Could not read from remote repository."
 -------解决方法：https://blog.csdn.net/chaoyueziji123/article/details/54669555
+
+
 -----解决ssh-keygen 不是内部或外部命令
 -------解决方法：https://blog.csdn.net/zy_281870667/article/details/50443403
+
+
 -----error: src refspec master does not match any.error: failed to push some refs to 'git@github.com:ytdxming/gitsource.git'
 -------解决方法：仓库为空，添加文件https://www.cnblogs.com/jeremylee/p/5715289.html
+
+-----git clone时出现问题
+     Permissiondenied (publickey).
+
+　　  fatal:Could not read from remote repository.
+
+　　  Pleasemake sure you have the correct access rights
+
+　　  and the repository exists.
+-------解决方法：https://www.cnblogs.com/wmr95/p/7852832.html
+       链接库是没有问题的，问题存在于本地没有ssh密钥，创建密钥并上传到github
