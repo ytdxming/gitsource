@@ -32,6 +32,29 @@
 ------本命令为创建并切换到分支dev
 
 
+//***
+--创建分支冲突解决
+    //**创建分支gitskill
+    --git branch gitskill
+    --git checkout gitskill
+    --或者直接使用git checkout -b gitskill
+
+    //**在分支创建成果并上交
+    --git add textname.txt
+    --git commit -m "comment such as gitskill commit"
+
+
+    //**切换分支到master,创建不一样的成果并上交
+    --git checkout master
+    --git add textname.txt
+    --git commit -m "commit such as master commit"
+
+
+//**test online oneline**//
+
+
+
+
 
 
 
