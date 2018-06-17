@@ -1,4 +1,4 @@
-ar multerUtil = require('./multerUtil');
+var multerUtil = require('./multerUtil');
         //multer有single()中的名称必须是表单上传字段的name名称。
 var upload=multerUtil.upload.single('logo');       	   
 
