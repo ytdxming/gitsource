@@ -45,6 +45,7 @@ app.post('/singleUpload',function(req,res,next){
 
 app.post('/mulUpload',function(req,res,next){
 	console.log("go into post");
+	console.log(req.files);
 	//if()    //if this is single file to upload
 	uploadmult(req,res,function(err){
 		console.log("go into uploadmult");
