@@ -20,8 +20,8 @@ var createFolder=function(folder){
       try {
         //To test the folder 
         //if the folder not e xist,the pull error"no such file or directory"
+        //fs.accessSync(folder);
         fs.accessSync(folder);
-
       } catch(e) {
         // statements
         console.log(e);
