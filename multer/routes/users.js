@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-
+/**获取用户清单 */
 router.get('/display',function(req,res,next){
 	db.query('select * from user',(err,result)=>{
 		if(err){
@@ -20,9 +20,10 @@ router.get('/display',function(req,res,next){
 		};
 		console.log('*********display all user***********');
 		//res.render('index.ejs',result:result);
-		res.render('userlist.ejs',{userList:result});
 		console.log(result);
 
+		res.render('userlist.ejs',{userList:result});
+		
 	});	
 })
 
