@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>display all users</title>
+    <meta charset="UTF-8">
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">  
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  </head>
+  <body>
+    <h1>Userlist</h1>
+    <p>Welcome to Userlist</p>
+    <table class="table">
+   		<thead>
+   		<tr>
+   			<td>id</td>
+   			<td>name</td>
+   			<td>age</td>
+   		</tr>
+   		</thead>
+   		<tbody>
+   		<%for(item in  userList){%>
+   			
+   		<tr>
+			<td>				
+				<%=userList[item].id%>
+			</td>
+			<td>
+				<%=userList[item].name%>
+			</td>
+			<td>
+				<%=userList[item].age%>
+			</td>
+			
+		</tr>
+   		<%};%>
+   		</tbody>
+   	</table>
+   		
+  </body>
+</html>

@@ -1,3 +1,5 @@
+
+var db={};
 var mysql= require('mysql');
 var $dbconfig=require('../conf/db');
 
@@ -12,24 +14,38 @@ var pool=mysql.createPool($dbconfig.mysql);
 
 // student.forEach()
 
-db.query = function(sql, callback){  
+// db.query = function(sql, callback){  
+function query(sql, callback){  
   
     if (!sql) {  
-        callback();  
+        //callback();  
+        console.log("not sql error");
         return;  
     }  
-    pool.query(sql, function(err, rows, fields) {  
-      if (err) {  
+
+
+    pool.query(sql, function(err, result) {  
+        if (err) {  
         console.log(err);  
         callback(err, null);  
         return;  
       };  
-  
-      callback(null, rows, fields);  
+     
+      callback(null, result);  
     });  
+    // pool.query(sql, function(err, rows, fields) {  
+    //     if (err) {  
+    //     console.log(err);  
+    //     //callback(err, null);  
+    //     return;  
+    //   };  
+     
+    //   callback(null, rows, fields);  
+    // });  
 }  
-module.exports = db;  
-
+module.exports = {
+    query:query 
+}
 
 // 对query执行的结果自定义返回JSON
 
