@@ -73,7 +73,7 @@ function query(sql, ArgsB, ArgsC) {
         });
 
     } else {
-        throw new Error("Query 参数必须为3个或者4个") ；
+        throw new Error('Query 参数');
         return;
     }
 
