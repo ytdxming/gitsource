@@ -101,7 +101,7 @@ module.exports={
 	console.log(param);
 	//console.log("*****"+param.id,param.name,param.age);
 
-	if(param.name==null || param.age==null) {
+	if(param.id==null ) {
 		jsonWrite(res,undefined);
 		return;
 	}
@@ -112,11 +112,29 @@ module.exports={
 
 
 
-	db.query('delete * from user where id=?',param.id,(err,result)=>{
+	db.query('delete  from user where id=?',[param.id],(err,result)=>{
 if(err){
 	console.log(err);
 	return;
-},
+};
+
+
+
+if(result){
+			res.render('success');
+//console.log("success");
+			
+
+		//res.render('userlist.ejs',{userList:result});
+		}else {
+			res.render('error');
+		
+		}
+		console.log('*********delete user***********');
+		//res.render('index.ejs',result:result);
+		console.log(result);
+		return;
+
 	})
 
 	}

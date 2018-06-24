@@ -42,4 +42,19 @@ router.get('/adduser',function(req,res,next){
 
 })
 
+
+
+router.get('/deluser',function(req,res,next){
+	
+
+	/**
+	*/
+	userdao.delete(req,res,next);
+	//res.render('success');
+
+	console.log("*****alreary delete users ,now list all*******");
+	//userdao.listuser(req,res,next);
+
+})
+
 module.exports = router;
