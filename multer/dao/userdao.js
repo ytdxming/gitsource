@@ -137,6 +137,53 @@ module.exports = {
 
 		})
 
+	},
+
+
+
+	updateuser:function(req,res,next){
+		//res.render('adduser.ejs');
+		var param = req.query || req.params;
+		/**
+		*/
+
+		console.log("***Raram is not null ");
+		console.log(param);
+		//console.log("*****"+param.id,param.name,param.age);
+
+		if (param.id == null) {
+			jsonWrite(res, undefined);
+			return;
+		}
+
+
+		console.log("***Raram is not null ");
+		console.log("*****" + param.id, param.name, param.age);
+
+
+
+
+
+db.query('update user set  name=?,age=? where id=?',[param.name,param.age,param.id],(err,result)=>{
+	if(err){
+		console.log(err);
+		return next;
+	};
+
+      if(result){
+      	res.render('success');
+      }else {
+      	res.render('error');
+      };
+
+     console.log('*********updateuser user***********');
+			//res.render('index.ejs',result:result);
+			console.log(result);
+			return next;
+
+})
+
+
 	}
 
 

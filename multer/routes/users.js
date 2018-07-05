@@ -1,4 +1,5 @@
 var express = require('express');
+var fs=require('fs');
 var userdao=require('../dao/userdao');
 var db=require('../common/mysqlbasicconn');
 
@@ -30,7 +31,7 @@ router.get('/display',function(req,res,next){
 
 
 router.get('/adduser',function(req,res,next){
-	
+	console.log("enter the adduser router");
 
 	/**
 	*/
@@ -40,7 +41,15 @@ router.get('/adduser',function(req,res,next){
 	console.log("*****alreary insert one ,now list all*******");
 	//userdao.listuser(req,res,next);
 
-})
+});
+
+
+router.get('/add',function(req,res,next){
+	var form=fs.readFileSync('./views/adduser.html',{encoding:'utf8'});
+	res.send(form);
+
+	console.log('form read success');
+});
 
 
 
@@ -49,10 +58,33 @@ router.get('/deluser',function(req,res,next){
 
 	/**
 	*/
+
 	userdao.delete(req,res,next);
 	//res.render('success');
 
 	console.log("*****alreary delete users ,now list all*******");
+	//userdao.listuser(req,res,next);
+
+});
+
+router.get('/del',function(req,res,next){
+	var form=fs.readFileSync('./views/deluser.html',{encoding:'utf8'});
+	res.send(form);
+
+
+});
+
+
+
+router.get('/updateuser',function(req,res,next){
+	
+
+	/**
+	*/
+	userdao.updateuser(req,res,next);
+	//res.render('success');
+
+	console.log("*****alreary updateuser users ,now list all*******");
 	//userdao.listuser(req,res,next);
 
 })
